@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="score.css">
+    <title>Match Score</title>
+</head>
+<body>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="heading">
+                <h1>Hey..Your Score is :
+                    <span id="count">0</span>
+                </h1>
+            </div>
+            <div class="score-container">
+                <div class="btns" id='add'>
+                    <button type="add">Add</button>
+                </div>
+                <div class="btns" id='sub'>
+                    <button type="sub">Sub</button>
+                </div>
+                <div class="btns" id='reset'>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        let count = 0;
+        const countE1 = document.getElementById('count')
+        countE1.innerText = count;
+
+        const addbtn = document.getElementById('add');
+        const subbtn = document.getElementById('sub');
+        const resetbtn = document.getElementById('reset');
+
+        addbtn.addEventListener("click",()=>{
+            count=count+10;
+            countE1.innerText=count;
+        })
+        subbtn.addEventListener("click",()=>{
+            count=count-10;
+            countE1.innerText=count;
+        })
+        resetbtn.addEventListener("click",()=>{
+            count=0;
+            countE1.innerText=count;
+        })
+    </script>
+</body>
+</html>
